@@ -6,7 +6,7 @@
                 INTERNET
                     |
          Public API Gateway VM
-            34.28.153.155
+            34.55.240.176
                  :9000
                     |
           -------------------
@@ -14,7 +14,7 @@
           -------------------
                     |
           Inference VM
-             10.0.1.3
+             10.0.1.2
                :8000
           (NO PUBLIC IP)
 
@@ -64,7 +64,7 @@ terraform apply
 
 API Test
 Curl Request
-curl -X POST http://34.28.153.155:9000/chat \
+curl -X POST http://34.55.240.176:9000/chat \
 -H "Content-Type: application/json" \
 -d '{"message":"What is cloud computing?"}'
 
