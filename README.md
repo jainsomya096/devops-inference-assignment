@@ -53,7 +53,7 @@ Custom VPC
 Private subnet
 Firewall rules
 Compute Engine VMs
-```
+
 Deployment
 
 Initialize Terraform
