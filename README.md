@@ -106,4 +106,5 @@ Key decisions and learnings:
 - Used Terraform to iteratively provision and modify infrastructure rather than relying on manual console configuration.
 Notes
 The inference VM was temporarily assigned public internet access during setup for dependency installation and debugging. After deployment, the public IP was removed to maintain private subnet isolation.
+The deployment endpoint is kept active for evaluation purposes and may be decommissioned after the review period to avoid unnecessary cloud charges.
 ```
