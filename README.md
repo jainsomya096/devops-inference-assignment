@@ -85,6 +85,25 @@ Monitoring and logging
 Authentication and rate limiting
 GPU-based inference workers for large models
 
+## Engineering Notes
+
+
+
+During implementation, I encountered several real-world infrastructure and deployment challenges while working within free-tier cloud constraints.
+
+
+
+Key decisions and learnings:
+
+- Initially attempted full transformer-based inference deployment using HuggingFace models.
+
+- Encountered memory limitations on free-tier e2-micro instances during PyTorch installation and model loading.
+
+- Replaced the heavy inference runtime with a lightweight inference worker while preserving the distributed architecture, internal networking, API gateway, Terraform infrastructure, and deployment flow.
+
+- Temporarily enabled outbound internet access on the inference VM during provisioning for dependency installation and debugging, then removed the public IP afterward to restore proper private subnet isolation.
+
+- Used Terraform to iteratively provision and modify infrastructure rather than relying on manual console configuration.
 Notes
 The inference VM was temporarily assigned public internet access during setup for dependency installation and debugging. After deployment, the public IP was removed to maintain private subnet isolation.
 ```
