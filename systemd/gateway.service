@@ -1,0 +1,12 @@
+[Unit]
+Description=FastAPI Gateway Service
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/gateway
+ExecStart=/home/ubuntu/gateway/venv/bin/uvicorn gateway:app --host 0.0.0.0 --port 9000
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
