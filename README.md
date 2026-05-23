@@ -87,3 +87,4 @@ GPU-based inference workers for large models
 
 Notes
 The inference VM was temporarily assigned public internet access during setup for dependency installation and debugging. After deployment, the public IP was removed to maintain private subnet isolation.
+```
